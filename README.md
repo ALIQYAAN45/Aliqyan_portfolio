@@ -8,17 +8,19 @@
 
 ## 🌐 Live Deployed Projects Summary
 
-All four projects featured in the portfolio now have **fully functioning, verified Live Demo deployments** online:
+All projects featured in the portfolio have **functioning, verified Live Demo & Interactive deployments** online:
 
-| # | Project | Tech Stack | GitHub Repository | Live Demo URL |
+| # | Project | Tech Stack | Type / Repository | Live Demo / Workspace URL |
 | :---: | :--- | :--- | :--- | :--- |
-| **1** | **RelationX** | Python, Flask, SQLite, Network Graphs, Discrete Math | [`ALIQYAAN45/RelationX`](https://github.com/ALIQYAAN45/RelationX) | 🚀 [**relationx.onrender.com**](https://relationx.onrender.com/) |
-| **2** | **Hospital KRR System** | Python, Flask, SQLite, Frame-Based KRR, Clinical Rules | [`ALIQYAAN45/Hospital_KRR_System`](https://github.com/ALIQYAAN45/Hospital_KRR_System) | 🚀 [**hospital-krr-system.onrender.com**](https://hospital-krr-system.onrender.com/) |
-| **3** | **E-Commerce Order Dispatcher** | Python, heapq, Priority Queues, Flask, SQLite | [`ALIQYAAN45/Ecommerce_Order_Dispatcher`](https://github.com/ALIQYAAN45/Ecommerce_Order_Dispatcher) | 🚀 [**ecommerce-order-dispatcher.onrender.com**](https://ecommerce-order-dispatcher.onrender.com/) |
-| **4** | **AI World** | HTML5, CSS3, JavaScript, AI Education | [`ALIQYAAN45/AI_World`](https://github.com/ALIQYAAN45/AI_World) | 🚀 [**aliqyaan45.github.io/AI_World**](https://aliqyaan45.github.io/AI_World/) |
+| **1** | **E-Commerce Sales & Customer Analysis** | Microsoft Excel, Pivot Tables, Charts, Slicers, KPI Cards, Data Cleaning | Interactive Excel Dashboard | 📊 [**View Excel Dashboard**](https://in.docworkspace.com/d/sbCaegI8KB8C55wD_ang1ez496vslen4pe7?sa=601.1037) |
+| **2** | **RelationX** | Python, Flask, SQLite, Network Graphs, Discrete Math | [`ALIQYAAN45/RelationX`](https://github.com/ALIQYAAN45/RelationX) | 🚀 [**relationx.onrender.com**](https://relationx.onrender.com/) |
+| **3** | **Hospital KRR System** | Python, Flask, SQLite, Frame-Based KRR, Clinical Rules | [`ALIQYAAN45/Hospital_KRR_System`](https://github.com/ALIQYAAN45/Hospital_KRR_System) | 🚀 [**hospital-krr-system.onrender.com**](https://hospital-krr-system.onrender.com/) |
+| **4** | **E-Commerce Order Dispatcher** | Python, heapq, Priority Queues, Flask, SQLite | [`ALIQYAAN45/Ecommerce_Order_Dispatcher`](https://github.com/ALIQYAAN45/Ecommerce_Order_Dispatcher) | 🚀 [**ecommerce-order-dispatcher.onrender.com**](https://ecommerce-order-dispatcher.onrender.com/) |
+| **5** | **AI World** | HTML5, CSS3, JavaScript, AI Education | [`ALIQYAAN45/AI_World`](https://github.com/ALIQYAAN45/AI_World) | 🚀 [**aliqyaan45.github.io/AI_World**](https://aliqyaan45.github.io/AI_World/) |
 
 > [!NOTE]
-> On Render's free tier, backend web services (RelationX, Hospital KRR, and E-Commerce Order Dispatcher) automatically spin down after inactivity. When a visitor clicks **Live Demo**, Render automatically wakes the instance in ~30–45 seconds. AI World is hosted on GitHub Pages with instantaneous global CDN delivery.
+> - The **E-Commerce Sales & Customer Analysis** dashboard is hosted live via cloud document workspace for instant spreadsheet interaction.
+> - On Render's free tier, backend web services (RelationX, Hospital KRR, and E-Commerce Order Dispatcher) automatically spin down after inactivity. When a visitor clicks **Live Demo**, Render automatically wakes the instance in ~30–45 seconds. AI World is hosted on GitHub Pages with instantaneous global CDN delivery.
 
 ---
 

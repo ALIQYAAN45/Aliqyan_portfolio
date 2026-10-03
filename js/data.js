@@ -64,8 +64,8 @@ const portfolioData = {
   // ------------------------------------------------------------------
   stats: [
     { value: "CSE (AI & ML)", label: "Academic Specialization" },
-    { value: "4", label: "College Micro-Projects" },
-    { value: "100%", label: "Open Source on GitHub" },
+    { value: "5", label: "College & Practical Projects" },
+    { value: "100%", label: "Open Source & Live Projects" },
     { value: "Continuous", label: "Active Learning & Building" }
   ],
 
@@ -216,7 +216,112 @@ const portfolioData = {
   //   SVG/CSS schematic preview with zero human portraits.
   // ------------------------------------------------------------------
   projects: [
-    // PROJECT 1: HOSPITAL KRR SYSTEM (DEPLOYED ON RENDER)
+    // PROJECT 1: E-COMMERCE SALES & CUSTOMER ANALYSIS (EXCEL DASHBOARD)
+    {
+      id: "excel-ecommerce-analysis",
+      name: "E-Commerce Sales & Customer Analysis",
+      fullTitle: "Excel Data Visualization and Dashboard",
+      description: "Developed an interactive Excel dashboard to analyze e-commerce sales and customer data. The project includes data cleaning, Pivot Tables, visual charts, KPI cards, interactive filters, and business insights to help understand sales performance, profit, customer activity, and product category trends.",
+      technologies: [
+        "Microsoft Excel",
+        "Excel Pivot Tables",
+        "Excel Charts",
+        "Interactive Slicers",
+        "Data Cleaning",
+        "Data Analysis",
+        "KPI Cards",
+        "Data Visualization"
+      ],
+      excelUrl: "https://in.docworkspace.com/d/sbCaegI8KB8C55wD_ang1ez496vslen4pe7?sa=601.1037",
+      live: "https://in.docworkspace.com/d/sbCaegI8KB8C55wD_ang1ez496vslen4pe7?sa=601.1037",
+      badge: "EXCEL DASHBOARD",
+      codeHeader: "ECOMMERCE_SALES_DASHBOARD.xlsx",
+      previewType: "excel",
+      image: "assets/images/excel-dashboard.jpg",
+      isExcelProject: true,
+      customButtons: [
+        {
+          id: "btn-excel-dashboard",
+          text: "View Excel Dashboard",
+          url: "https://in.docworkspace.com/d/sbCaegI8KB8C55wD_ang1ez496vslen4pe7?sa=601.1037",
+          isExternal: true,
+          type: "excel"
+        },
+        {
+          id: "btn-excel-details",
+          text: "View Project Details",
+          type: "details"
+        }
+      ],
+      details: {
+        objective: "Developed an interactive Excel dashboard to analyze e-commerce sales and customer data. The project includes data cleaning, Pivot Tables, visual charts, KPI cards, interactive filters, and business insights to help understand sales performance, profit, customer activity, and product category trends.",
+        tools: [
+          "Microsoft Excel",
+          "Excel Pivot Tables",
+          "Excel Charts",
+          "Interactive Slicers",
+          "Data Cleaning",
+          "Data Analysis",
+          "KPI Cards",
+          "Data Visualization"
+        ],
+        kpis: [
+          { label: "Total Revenue", value: "$1,245,670", trend: "+8.5% YoY" },
+          { label: "Net Profit Margin", value: "24.1%", trend: "+1.2% Target" },
+          { label: "Total Orders", value: "8,743", trend: "Multi-Region" },
+          { label: "Avg. Order Value", value: "$142.48", trend: "+4.1% Basket" }
+        ],
+        features: [
+          {
+            title: "KPI Executive Summary Cards",
+            desc: "Provides real-time visibility into high-level business metrics including gross revenue, net margin percentage, total order count, and average order value (AOV)."
+          },
+          {
+            title: "Interactive Slicers & Timeline",
+            desc: "One-click interactive filters for Region, Product Category, and Date ranges that dynamically synchronize and cross-filter all visualizations simultaneously."
+          },
+          {
+            title: "Dynamic Pivot Tables",
+            desc: "Engineered robust multi-dimensional Pivot Tables that automatically aggregate large transaction volumes by month, region, customer segment, and product line."
+          },
+          {
+            title: "Dual-Axis Trend & Donut Charts",
+            desc: "Visual charts comparing monthly sales trends against net profit trajectory alongside category distribution donuts and top product performance tables."
+          },
+          {
+            title: "Data Cleaning & Preprocessing",
+            desc: "Comprehensive ETL workflow: standardizing date timestamps, eliminating duplicates, fixing missing values, and establishing calculated profit margin fields."
+          }
+        ],
+        analysis: [
+          {
+            title: "Sales Performance Analysis",
+            desc: "Tracked monthly revenue fluctuations and identified seasonal peak periods, promotional spikes, and quarterly growth trends."
+          },
+          {
+            title: "Profit Margin Breakdown",
+            desc: "Analyzed margin differences between product categories, identifying top profit generators versus high-volume low-margin items."
+          },
+          {
+            title: "Customer Activity & Behavior",
+            desc: "Studied repeat purchase patterns, order frequency, customer geographic concentration, and average transaction sizes."
+          },
+          {
+            title: "Product Category Trends",
+            desc: "Evaluated sales volume across Electronics, Apparel, Home & Kitchen to guide inventory management and marketing focus."
+          }
+        ],
+        highlights: [
+          "Delivered an executive-ready, interactive spreadsheet dashboard connecting data modeling to visual business intelligence.",
+          "Implemented dynamic cross-filtering with slicers for instant interactive exploration of revenue and profit.",
+          "Identified top 20% products driving over 65% of overall gross profit margin.",
+          "Engineered using scalable Excel table formatting allowing automatic data refresh when new transactions are loaded.",
+          "Verified live cloud spreadsheet accessible via WPS Docs / docworkspace for immediate interactive review."
+        ]
+      }
+    },
+
+    // PROJECT 2: HOSPITAL KRR SYSTEM (DEPLOYED ON RENDER)
     {
       id: "hospital-krr",
       name: "Hospital KRR System",

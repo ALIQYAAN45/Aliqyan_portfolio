@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCopyEmail(data.social?.email);
   initBackToTop();
   updateCopyright();
+  initProjectDetailsModal();
 });
 
 /* ====================================================================
@@ -311,6 +312,83 @@ function initSkillFilters() {
    ==================================================================== */
 function generateTechnicalPreviewSvg(previewType) {
   switch (previewType) {
+    // Project: E-Commerce Sales & Customer Analysis Excel Dashboard
+    case 'excel':
+      return `
+        <svg class="schematic-svg" viewBox="0 0 400 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="barGradCyan" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#0066ff" stop-opacity="0.4"/>
+            </linearGradient>
+            <linearGradient id="barGradPurple" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#a855f7" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#6366f1" stop-opacity="0.4"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Chart Grid Lines -->
+          <line x1="30" y1="36" x2="370" y2="36" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <line x1="30" y1="72" x2="370" y2="72" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <line x1="30" y1="108" x2="370" y2="108" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <line x1="30" y1="144" x2="370" y2="144" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+          <!-- Top Mini KPI Cards -->
+          <rect x="25" y="8" width="105" height="30" rx="5" fill="#0f1523" stroke="#00f59b" stroke-width="1.2"/>
+          <text x="35" y="20" fill="#94a3b8" font-size="7.5" font-family="monospace">TOTAL REVENUE</text>
+          <text x="35" y="32" fill="#00f59b" font-size="10.5" font-family="monospace" font-weight="bold">$1,245,670</text>
+
+          <rect x="140" y="8" width="105" height="30" rx="5" fill="#0f1523" stroke="#00f0ff" stroke-width="1.2"/>
+          <text x="150" y="20" fill="#94a3b8" font-size="7.5" font-family="monospace">PROFIT MARGIN</text>
+          <text x="150" y="32" fill="#00f0ff" font-size="10.5" font-family="monospace" font-weight="bold">24.1% [↑8.5%]</text>
+
+          <rect x="255" y="8" width="120" height="30" rx="5" fill="#0f1523" stroke="#a855f7" stroke-width="1.2"/>
+          <text x="265" y="20" fill="#94a3b8" font-size="7.5" font-family="monospace">ORDER VOLUME</text>
+          <text x="265" y="32" fill="#c084fc" font-size="10.5" font-family="monospace" font-weight="bold">8,743 ORDERS</text>
+
+          <!-- Interactive Slicer Panel (Left) -->
+          <rect x="25" y="46" width="75" height="98" rx="6" fill="#090d16" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1"/>
+          <text x="33" y="58" fill="#00f0ff" font-size="8" font-family="monospace" font-weight="bold">SLICER: REGION</text>
+          <rect x="30" y="63" width="65" height="15" rx="3" fill="rgba(0, 240, 255, 0.2)" stroke="#00f0ff" stroke-width="0.8"/>
+          <text x="35" y="74" fill="#ffffff" font-size="7.5" font-family="monospace">✓ North Am.</text>
+          <rect x="30" y="82" width="65" height="15" rx="3" fill="#111827" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+          <text x="35" y="93" fill="#94a3b8" font-size="7.5" font-family="monospace">  Europe</text>
+          <rect x="30" y="101" width="65" height="15" rx="3" fill="#111827" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+          <text x="35" y="112" fill="#94a3b8" font-size="7.5" font-family="monospace">  Asia-Pacific</text>
+          <rect x="30" y="120" width="65" height="15" rx="3" fill="#111827" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+          <text x="35" y="131" fill="#94a3b8" font-size="7.5" font-family="monospace">  Other</text>
+
+          <!-- Clustered Column Chart (Center) -->
+          <rect x="115" y="94" width="10" height="50" rx="2" fill="url(#barGradCyan)"/>
+          <rect x="130" y="82" width="10" height="62" rx="2" fill="url(#barGradCyan)"/>
+          <rect x="145" y="70" width="10" height="74" rx="2" fill="url(#barGradCyan)"/>
+          <rect x="160" y="86" width="10" height="58" rx="2" fill="url(#barGradCyan)"/>
+          <rect x="175" y="66" width="10" height="78" rx="2" fill="url(#barGradCyan)"/>
+          <rect x="190" y="54" width="10" height="90" rx="2" fill="url(#barGradCyan)"/>
+          <rect x="205" y="76" width="10" height="68" rx="2" fill="url(#barGradCyan)"/>
+          <rect x="220" y="62" width="10" height="82" rx="2" fill="url(#barGradCyan)"/>
+
+          <!-- Trendline Curve (Profit Margin Spline) -->
+          <path d="M120 108 Q 150 68, 180 82 T 225 58" fill="none" stroke="#00f59b" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="120" cy="108" r="3" fill="#00f59b"/>
+          <circle cx="150" cy="76" r="3" fill="#00f59b"/>
+          <circle cx="180" cy="82" r="3" fill="#00f59b"/>
+          <circle cx="225" cy="58" r="3" fill="#00f59b"/>
+
+          <!-- Category Donut Breakdown (Right) -->
+          <circle cx="310" cy="95" r="34" fill="none" stroke="#1e293b" stroke-width="12"/>
+          <circle cx="310" cy="95" r="34" fill="none" stroke="#00f0ff" stroke-width="12" stroke-dasharray="80 135" stroke-dashoffset="20"/>
+          <circle cx="310" cy="95" r="34" fill="none" stroke="#a855f7" stroke-width="12" stroke-dasharray="55 160" stroke-dashoffset="-60"/>
+          <circle cx="310" cy="95" r="34" fill="none" stroke="#00f59b" stroke-width="12" stroke-dasharray="40 175" stroke-dashoffset="-115"/>
+          <text x="310" y="93" fill="#ffffff" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">CATEGORY</text>
+          <text x="310" y="104" fill="#94a3b8" font-size="7.5" font-family="monospace" text-anchor="middle">SALES</text>
+
+          <!-- Formula Bar Indicator (Bottom) -->
+          <rect x="25" y="152" width="350" height="18" rx="4" fill="#080c14" stroke="rgba(255,255,255,0.08)"/>
+          <text x="35" y="165" fill="#00f0ff" font-size="8.5" font-family="monospace">fx  =PIVOT.DASHBOARD(Sales[Revenue], Slicer[Region], Slicer[Category])</text>
+        </svg>
+      `;
+
     // Project 1: Frame-Based Knowledge Representation
     case 'krr':
       return `
@@ -447,7 +525,7 @@ function generateTechnicalPreviewSvg(previewType) {
 }
 
 /* ====================================================================
-   7. RENDER ALL FOUR PROJECTS (HONEST BUTTONS & NO PHOTOS)
+   7. RENDER PROJECTS (COLLEGE PROJECTS & EXCEL DASHBOARD)
    ==================================================================== */
 function renderProjects(projects) {
   const container = document.getElementById('projects-container');
@@ -455,8 +533,9 @@ function renderProjects(projects) {
 
   container.innerHTML = projects.map(proj => {
     const isLive = Boolean(proj.live);
-    const statusClass = isLive ? 'live' : 'repo';
-    const statusText = isLive ? '● LIVE DEPLOYMENT' : '◆ GITHUB REPOSITORY';
+    const isExcel = proj.badge === 'EXCEL DASHBOARD';
+    const statusClass = isExcel ? 'live excel-badge' : (isLive ? 'live' : 'repo');
+    const statusText = proj.badge ? `● ${proj.badge}` : (isLive ? '● LIVE DEPLOYMENT' : '◆ GITHUB REPOSITORY');
 
     const tagsHtml = (proj.technologies || []).map(t => `
       <span class="tech-tag">${t}</span>
@@ -464,33 +543,88 @@ function renderProjects(projects) {
 
     const technicalPreviewSvg = generateTechnicalPreviewSvg(proj.previewType);
 
-    // Live button state: active link if deployed, disabled "Coming Soon" if not
-    const liveButtonHtml = isLive
+    // If project defines an image preview, render the image thumbnail; otherwise SVG schematic
+    const previewContentHtml = proj.image
       ? `
-        <a href="${proj.live}" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="project-btn btn-demo live" 
-           id="btn-live-${proj.id}"
-           aria-label="Open live demo of ${proj.name} in a new tab">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-          <span>Live Demo</span>
-        </a>
+        <div class="schematic-grid-bg"></div>
+        <img src="${proj.image}" alt="${proj.name} Preview" class="schematic-image" loading="lazy" />
       `
       : `
-        <button type="button" 
-                class="project-btn btn-demo disabled" 
-                id="btn-live-${proj.id}" 
-                aria-disabled="true"
-                onclick="showToast('ℹ️ Live demo for ${proj.name} is coming soon. Explore the full code on GitHub!', 'info')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          <span>Coming Soon</span>
-        </button>
+        <div class="schematic-grid-bg"></div>
+        ${technicalPreviewSvg}
       `;
 
+    // Render action buttons
+    let actionsHtml = '';
+    if (proj.customButtons && proj.customButtons.length > 0) {
+      actionsHtml = proj.customButtons.map(btn => {
+        if (btn.type === 'excel') {
+          return `
+            <a href="${btn.url}" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="project-btn btn-excel" 
+               id="${btn.id || `btn-excel-${proj.id}`}"
+               aria-label="Open ${btn.text} in a new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span>${btn.text}</span>
+            </a>
+          `;
+        } else if (btn.type === 'details') {
+          return `
+            <button type="button" 
+                    class="project-btn btn-details" 
+                    id="${btn.id || `btn-details-${proj.id}`}"
+                    onclick="openProjectDetails('${proj.id}')"
+                    aria-label="View project details for ${proj.name}">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>${btn.text}</span>
+            </button>
+          `;
+        }
+        return '';
+      }).join('');
+    } else {
+      const liveButtonHtml = isLive
+        ? `
+          <a href="${proj.live}" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="project-btn btn-demo live" 
+             id="btn-live-${proj.id}"
+             aria-label="Open live demo of ${proj.name} in a new tab">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span>Live Demo</span>
+          </a>
+        `
+        : `
+          <button type="button" 
+                  class="project-btn btn-demo disabled" 
+                  id="btn-live-${proj.id}" 
+                  aria-disabled="true"
+                  onclick="showToast('ℹ️ Live demo for ${proj.name} is coming soon. Explore the full code on GitHub!', 'info')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Coming Soon</span>
+          </button>
+        `;
+
+      actionsHtml = `
+        <a href="${proj.github}" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="project-btn btn-code" 
+           id="btn-github-${proj.id}"
+           aria-label="Open ${proj.name} GitHub repository in a new tab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          <span>GitHub</span>
+        </a>
+        ${liveButtonHtml}
+      `;
+    }
+
     return `
-      <article class="project-card" id="project-card-${proj.id}">
-        <!-- Abstract Technical Schematic Preview (Zero Photos) -->
+      <article class="project-card ${isExcel ? 'excel-project-card' : ''}" id="project-card-${proj.id}">
+        <!-- Preview Header -->
         <div class="project-schematic-header">
           <div class="schematic-terminal-bar">
             <div class="terminal-dots">
@@ -501,9 +635,8 @@ function renderProjects(projects) {
             <span class="terminal-title">${proj.codeHeader || proj.name}</span>
           </div>
 
-          <div class="schematic-canvas-area">
-            <div class="schematic-grid-bg"></div>
-            ${technicalPreviewSvg}
+          <div class="schematic-canvas-area ${proj.image ? 'has-thumb-img' : ''}">
+            ${previewContentHtml}
           </div>
 
           <span class="project-status-badge ${statusClass}">
@@ -522,19 +655,9 @@ function renderProjects(projects) {
             ${tagsHtml}
           </div>
 
-          <!-- Buttons: GitHub Repository & Live Demo -->
+          <!-- Buttons -->
           <div class="project-card-actions">
-            <a href="${proj.github}" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="project-btn btn-code" 
-               id="btn-github-${proj.id}"
-               aria-label="Open ${proj.name} GitHub repository in a new tab">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-              <span>GitHub</span>
-            </a>
-
-            ${liveButtonHtml}
+            ${actionsHtml}
           </div>
         </div>
       </article>
@@ -687,3 +810,207 @@ function showToast(message, type = 'info') {
     }, 350);
   }, 3600);
 }
+
+/* ====================================================================
+   13. PROJECT DETAILS MODAL CONTROLLER
+   ==================================================================== */
+function initProjectDetailsModal() {
+  const modal = document.getElementById('project-details-modal');
+  const closeBtn = document.getElementById('modal-close-btn');
+  if (!modal) return;
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeProjectDetails);
+  }
+
+  // Backdrop click to close
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeProjectDetails();
+    }
+  });
+
+  // ESC key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeProjectDetails();
+    }
+  });
+}
+
+function openProjectDetails(projectId) {
+  const modal = document.getElementById('project-details-modal');
+  const bodyContent = document.getElementById('modal-body-content');
+  const codeLabel = document.getElementById('modal-project-code');
+  if (!modal || !bodyContent) return;
+
+  const data = window.portfolioData || {};
+  const project = (data.projects || []).find(p => p.id === projectId);
+  if (!project) return;
+
+  if (codeLabel) {
+    codeLabel.textContent = project.codeHeader || `${project.name.toUpperCase().replace(/\s+/g, '_')}.md`;
+  }
+
+  const d = project.details || {};
+  const kpisHtml = (d.kpis || []).map(k => `
+    <div class="modal-kpi-item">
+      <span class="modal-kpi-lbl">${k.label}</span>
+      <span class="modal-kpi-val">${k.value}</span>
+      <span class="modal-kpi-trend">${k.trend}</span>
+    </div>
+  `).join('');
+
+  const toolsHtml = (d.tools || project.technologies || []).map(t => `
+    <span class="modal-tech-chip">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      <span>${t}</span>
+    </span>
+  `).join('');
+
+  const featuresHtml = (d.features || []).map(f => `
+    <div class="modal-info-card">
+      <div class="modal-card-head">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <h4>${f.title}</h4>
+      </div>
+      <p>${f.desc}</p>
+    </div>
+  `).join('');
+
+  const analysisHtml = (d.analysis || []).map(a => `
+    <div class="modal-info-card purple-accent">
+      <div class="modal-card-head">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2.2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        <h4>${a.title}</h4>
+      </div>
+      <p>${a.desc}</p>
+    </div>
+  `).join('');
+
+  const highlightsHtml = (d.highlights || []).map(h => `
+    <li class="modal-highlight-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      <span>${h}</span>
+    </li>
+  `).join('');
+
+  const excelActionBtn = project.excelUrl
+    ? `
+      <a href="${project.excelUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-action-btn" id="modal-btn-view-excel">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        <span>View Live Excel Dashboard</span>
+      </a>
+    `
+    : '';
+
+  bodyContent.innerHTML = `
+    <!-- Top Metadata Banner -->
+    <div class="modal-title-group">
+      <div class="modal-badge-row">
+        <span class="modal-status-badge">● ${project.badge || 'PROJECT OVERVIEW'}</span>
+        <span class="modal-meta-tag">Interactive Business Intelligence & Analytics</span>
+      </div>
+      <h2 class="modal-title">${project.name}</h2>
+      <h3 class="modal-subtitle">${project.fullTitle}</h3>
+    </div>
+
+    <!-- Visual Dashboard Banner -->
+    ${project.image ? `
+      <div class="modal-visual-preview">
+        <img src="${project.image}" alt="${project.name} Excel Dashboard" class="modal-preview-img" />
+        <div class="modal-visual-overlay">
+          <span>WPS Docs / Microsoft Excel Cloud Spreadsheet</span>
+        </div>
+      </div>
+    ` : ''}
+
+    <!-- Key Performance Indicators (KPIs) -->
+    ${kpisHtml ? `
+      <div class="modal-section">
+        <h4 class="modal-section-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Executive KPI Summary Metrics
+        </h4>
+        <div class="modal-kpi-grid">${kpisHtml}</div>
+      </div>
+    ` : ''}
+
+    <!-- Project Objective -->
+    <div class="modal-section">
+      <h4 class="modal-section-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+        Project Objective & Scope
+      </h4>
+      <p class="modal-desc-text">${d.objective || project.description}</p>
+    </div>
+
+    <!-- Tools & Technologies -->
+    <div class="modal-section">
+      <h4 class="modal-section-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        Tools & Technologies Utilized
+      </h4>
+      <div class="modal-chips-wrap">${toolsHtml}</div>
+    </div>
+
+    <!-- Key Features & Architecture -->
+    ${featuresHtml ? `
+      <div class="modal-section">
+        <h4 class="modal-section-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          Key Dashboard Features & Capabilities
+        </h4>
+        <div class="modal-grid-2col">${featuresHtml}</div>
+      </div>
+    ` : ''}
+
+    <!-- Analysis Performed -->
+    ${analysisHtml ? `
+      <div class="modal-section">
+        <h4 class="modal-section-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+          Business & Statistical Analysis Performed
+        </h4>
+        <div class="modal-grid-2col">${analysisHtml}</div>
+      </div>
+    ` : ''}
+
+    <!-- Main Project Highlights -->
+    ${highlightsHtml ? `
+      <div class="modal-section">
+        <h4 class="modal-section-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Main Project Highlights & Findings
+        </h4>
+        <ul class="modal-highlights-list">${highlightsHtml}</ul>
+      </div>
+    ` : ''}
+
+    <!-- Modal Footer Actions -->
+    <div class="modal-footer-actions">
+      ${excelActionBtn}
+      <button type="button" class="btn btn-secondary modal-close-action" onclick="closeProjectDetails()">
+        <span>Close Window</span>
+      </button>
+    </div>
+  `;
+
+  modal.classList.add('active');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProjectDetails() {
+  const modal = document.getElementById('project-details-modal');
+  if (!modal) return;
+
+  modal.classList.remove('active');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+// Make functions globally available
+window.openProjectDetails = openProjectDetails;
+window.closeProjectDetails = closeProjectDetails;
+
