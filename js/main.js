@@ -521,6 +521,65 @@ function generateTechnicalPreviewSvg(previewType) {
           <text x="337" y="143" fill="#94a3b8" font-size="9" font-family="monospace" text-anchor="middle">M_R [5x5] • 50%</text>
         </svg>
       `;
+
+    // Project: Real-Time Object Detection & Logging Platform (YOLOv8 + OpenCV + Streamlit)
+    case 'object-detection':
+      return `
+        <svg class="schematic-svg" viewBox="0 0 400 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="yoloBoxGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00f59b" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.08"/>
+            </linearGradient>
+            <linearGradient id="phoneBoxGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#0066ff" stop-opacity="0.08"/>
+            </linearGradient>
+            <linearGradient id="laptopBoxGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#a855f7" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#6366f1" stop-opacity="0.08"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Viewfinder Outer Frame & Corner Brackets -->
+          <path d="M 30 38 L 30 22 L 46 22" stroke="#00f0ff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 370 38 L 370 22 L 354 22" stroke="#00f0ff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 30 142 L 30 158 L 46 158" stroke="#00f0ff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 370 142 L 370 158 L 354 158" stroke="#00f0ff" stroke-width="2" stroke-linecap="round"/>
+
+          <!-- Center Crosshair Sight -->
+          <line x1="188" y1="90" x2="212" y2="90" stroke="rgba(0, 240, 255, 0.55)" stroke-width="1.2"/>
+          <line x1="200" y1="78" x2="200" y2="102" stroke="rgba(0, 240, 255, 0.55)" stroke-width="1.2"/>
+          <circle cx="200" cy="90" r="14" stroke="rgba(0, 240, 255, 0.35)" stroke-width="1" stroke-dasharray="3 3"/>
+
+          <!-- Detected Object 1: Person (Left) -->
+          <rect x="52" y="38" width="112" height="106" rx="4" fill="url(#yoloBoxGrad)" stroke="#00f59b" stroke-width="1.8"/>
+          <rect x="52" y="38" width="86" height="16" rx="2" fill="#0f1523" stroke="#00f59b" stroke-width="1"/>
+          <text x="57" y="50" fill="#00f59b" font-size="9" font-family="monospace" font-weight="bold">person: 94.2%</text>
+
+          <!-- Detected Object 2: Laptop (Right) -->
+          <rect x="226" y="50" width="124" height="92" rx="4" fill="url(#laptopBoxGrad)" stroke="#a855f7" stroke-width="1.8"/>
+          <rect x="226" y="50" width="86" height="16" rx="2" fill="#0f1523" stroke="#a855f7" stroke-width="1"/>
+          <text x="231" y="62" fill="#c084fc" font-size="9" font-family="monospace" font-weight="bold">laptop: 91.8%</text>
+
+          <!-- Detected Object 3: Cell Phone (Center-Bottom) -->
+          <rect x="176" y="106" width="46" height="40" rx="3" fill="url(#phoneBoxGrad)" stroke="#00f0ff" stroke-width="1.5"/>
+          <rect x="176" y="96" width="54" height="12" rx="2" fill="#0f1523" stroke="#00f0ff" stroke-width="0.8"/>
+          <text x="179" y="105" fill="#00f0ff" font-size="7.2" font-family="monospace" font-weight="bold">cell phone</text>
+
+          <!-- Telemetry HUD Overlay Top -->
+          <rect x="50" y="10" width="300" height="18" rx="4" fill="#080c14" stroke="rgba(255, 255, 255, 0.08)"/>
+          <circle cx="62" cy="19" r="3" fill="#00f59b"/>
+          <text x="72" y="22" fill="#94a3b8" font-size="8" font-family="monospace">FEED: ACTIVE</text>
+          <text x="150" y="22" fill="#00f0ff" font-size="8" font-family="monospace">YOLOv8 Nano</text>
+          <text x="236" y="22" fill="#c084fc" font-size="8" font-family="monospace">CONF >= 0.70</text>
+          <text x="318" y="22" fill="#00f59b" font-size="8" font-family="monospace">30 FPS</text>
+
+          <!-- Status HUD Overlay Bottom -->
+          <rect x="50" y="152" width="300" height="18" rx="4" fill="#080c14" stroke="rgba(255, 255, 255, 0.08)"/>
+          <text x="60" y="165" fill="#00f0ff" font-size="8" font-family="monospace">STREAMLIT_UI // BOUNDING_BOXES: 3 // LOGS: OPTIONAL_DB</text>
+        </svg>
+      `;
   }
 }
 
@@ -649,6 +708,12 @@ function renderProjects(projects) {
           <h3 class="project-title">${proj.name}</h3>
           <h4 class="project-subtitle">${proj.fullTitle}</h4>
           <p class="project-desc">${proj.description}</p>
+
+          ${proj.features && proj.features.length > 0 ? `
+            <ul class="project-features-list">
+              ${proj.features.map(f => `<li><span class="feat-bullet">▹</span><span>${f}</span></li>`).join('')}
+            </ul>
+          ` : ''}
 
           <!-- Technology Tags -->
           <div class="project-tech-tags">

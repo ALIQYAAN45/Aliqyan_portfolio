@@ -1373,6 +1373,30 @@ section {
   margin-bottom: 20px;
 }
 
+.project-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.project-features-list li {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.project-features-list .feat-bullet {
+  color: var(--accent-cyan);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
 .project-tech-tags {
   display: flex;
   flex-wrap: wrap;

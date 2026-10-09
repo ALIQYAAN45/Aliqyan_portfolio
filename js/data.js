@@ -64,7 +64,7 @@ const portfolioData = {
   // ------------------------------------------------------------------
   stats: [
     { value: "CSE (AI & ML)", label: "Academic Specialization" },
-    { value: "5", label: "College & Practical Projects" },
+    { value: "6", label: "College & Practical Projects" },
     { value: "100%", label: "Open Source & Live Projects" },
     { value: "Continuous", label: "Active Learning & Building" }
   ],
@@ -319,6 +319,39 @@ const portfolioData = {
           "Verified live cloud spreadsheet accessible via WPS Docs / docworkspace for immediate interactive review."
         ]
       }
+    },
+
+    // PROJECT 2: REAL-TIME OBJECT DETECTION & LOGGING PLATFORM (DEPLOYED ON RENDER)
+    {
+      id: "object-detection",
+      name: "Real-Time Object Detection & Logging Platform",
+      fullTitle: "Real-Time Computer Vision & Detection Logging System",
+      description: "A real-time computer vision application that detects and identifies objects in video frames using YOLO and OpenCV. It provides a Streamlit interface and supports detection event logging when the database is configured.",
+      features: [
+        "Real-time object detection",
+        "YOLO-based object recognition",
+        "Adjustable detection confidence threshold",
+        "Streamlit web interface",
+        "Detection event logging when the database is available",
+        "Modular Python project structure"
+      ],
+      technologies: [
+        "Python",
+        "OpenCV",
+        "YOLOv8",
+        "Ultralytics",
+        "Streamlit",
+        "MySQL",
+        "Git",
+        "GitHub",
+        "Render"
+      ],
+      github: "https://github.com/ALIQYAAN45/Real-Time-Object-Detection",
+      // >>> ACTUAL LIVE DEPLOYMENT URL (Render Web Service) <<<
+      live: "https://real-time-object-detection-yblk.onrender.com",
+      badge: "LIVE DEPLOYMENT",
+      codeHeader: "YOLO_OBJECT_DETECTION.py",
+      previewType: "object-detection"
     },
 
     // PROJECT 2: HOSPITAL KRR SYSTEM (DEPLOYED ON RENDER)
